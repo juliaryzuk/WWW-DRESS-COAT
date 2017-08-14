@@ -1,0 +1,70 @@
+//menu
+$backgroundHeader: rgb(47,50,55);
+$backgroundNav: rgb(249,224,219);
+$backgroundMain:rgb(219,219,219);
+$colorAcet: rgb(234,182,177);
+
+header{
+  .mainMenu{
+    box-shadow: 0 5px 3px 3px grey;
+    background-color:$backgroundNav;
+    .menu{
+    height: 55px;
+    background-color:$backgroundNav;
+    color:backgroundHeader;
+    font-weight: bold;
+    font-size: 20px;
+
+    ul{
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+      margin-top: -5px;
+      background:$backgroundNav;
+      height: 10%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      li{
+        position:relative;
+        height: 45px;
+
+        >ul{
+          position:absolute;
+          top:45px;
+          display:none;
+          li{
+            margin-top: 8px;
+          }
+        }
+        &:hover>ul{
+          display:flex;
+          flex-direction: column;
+          margin-top: 5px;
+        }
+        a{
+          text-decoration: none;
+          background:$backgroundNav;
+          color:$backgroundHeader;
+          padding: 5px 70px ;//height block
+          line-height: 48px;
+          display:block;
+          border-right: 1px solid $colorAcet;
+          -moz-transition: all 0.4s 0.02s ease;
+          -o-transition: all 0.4s 0.02s ease;
+          -webkit-transition: all 0.4s 0.02s ease;
+          &:hover{
+            background:$colorAcet;
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+footer{
+  background-color: $backgroundHeader;
+  height: 30%;
+}

@@ -1,0 +1,34 @@
+
+  $columns: 12;
+  $base-width: 100%/$columns;
+
+    .row{
+      // margin-right: -15px;
+      margin-left: -15px;
+      position: relative;
+
+      //Clearfix dla rzędow
+      &:before, &:after{
+        content: '';
+        display:block;
+        clear: both;
+      }
+
+      //Wlaściwości dla wszystkich kolumn
+       [class*='col-']{
+        min-height: 1px;
+        float:left;
+        padding: 5px;
+        word-wrap: break-word;
+        // margin:0;
+        // padding:0;//jesli dlugi tekst to żeby go zlaal i nie wychodził za ramy ;
+        // border: 1px solid red;  // table-layout: fixed;
+      }
+
+      //Tworzenie pętli
+      @for $i from 1 through $columns{
+        .col-#{$i}{
+          width: $base-width * $i;
+      }
+    }
+  }
